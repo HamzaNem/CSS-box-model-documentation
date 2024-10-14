@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS box model Documentation</title>
+        <link rel="stylesheet" href="fcc14 styles.css">
+    </head>
+    <body>
+        
+        <main id="main-doc">
+            <section class="main-section" id="CSS_box_model">
+                <header><h2>CSS box model</h2></header>
+                <p>In CSS, the term "box model" is used when talking about design and layout.<br>The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins.<br>
+                    <br>  
+                    The image below illustrates the box model:</p>
+                <div class="box-model-img-div">
+                    <img class="box-model-img" alt="box-model" src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*sKnLrT1TtqWDZg7GWoBCow.png">
+                </div>
+                <div class="box-model-div">
+                    <ul><p>Explanation of the different parts:</p>
+                        <li><strong>Content</strong> - The content of the box, where text and images appear</li>
+                        <li><strong>Padding</strong> - Clears an area around the content. The padding is transparent</li>
+                        <li><strong>Border</strong> - A border that goes around the padding and content</li>
+                        <li><strong>Margin</strong> - Clears an area outside the border. The margin is transparent</li>
+                    </ul>
+                    <p>The box model allows us to add a border around elements, and to define space between elements.</p>
+                </div>
+                <div class="box-model-div">
+                    <h4>Example:</h4>
+                    <div class="code-div">
+                        <code>
+                            div {<br>
+                                <span class="indent">width: 320px;<br></span>
+                                <span class="indent">padding: 30px;<br></span>
+                                <span class="indent">border: 3px solid gray;<br></span>
+                                <span class="indent">margin: 10px;<br></span>
+                            }
+                        </code>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <section class="main-section" id="Width_and_Height_of_an_Element">
+                <header><h2>Width and Height of an Element</h2></header>
+                <p>In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.</p>
+                <p class="tip"><strong>Important:</strong> When you set the width and height properties of an element with CSS, you just set the width and height of the <strong>content area.</strong> To calculate the total width and height of an element, you must also include the padding and borders.</p> 
+                <div class="width-and-height-div">
+                    <h4>Example:</h4>
+                    <div class="code-div">
+                        <code>
+                            div {<br>
+                                <span class="indent">width: 320px;<br></span>
+                                <span class="indent">height: 60px;<br></span>
+                                <span class="indent">padding: 10px;<br></span>
+                                <span class="indent">border: 5px solid Black;<br></span>
+                                <span class="indent">margin: 10px;<br></span>
+                            }
+                        </code>
+                    </div>
+                </div>
+                <div class="width-and-height-div">
+                    <p>Here is the calculation:</p>
+                    <div class="calc-div">
+                        320px (width of content area)<br>
+                        + 20px (left padding + right padding)<br>
+                        + 10px (left border + right border)<br>
+                        <strong>= 350px (total width)</strong><br>
+                        <br>
+                        50px (height of content area)<br>
+                        + 20px (top padding + bottom padding)<br>
+                        + 10px (top border + bottom border)<br>
+                        <strong>= 80px (total height)</strong><br>
+                    </div>
+                    <p>The total width of an element should be calculated like this:<br>
+                        Total element width = width + left padding + right padding + left border + right border<br>
+                        The total height of an element should be calculated like this:<br>
+                        Total element height = height + top padding + bottom padding + top border + bottom border</p>
+                </div>
+            </section>
+                
+            
+            <section class="main-section" id="CSS_padding">
+
+                <header><h2>CSS padding</h2></header>
+                    <p class="content">
+                        The CSS <code>padding</code> properties are used to generate space around an element's content, inside of any defined borders.
+                        With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).
+                    </p>
+        
+                <div class="padding-div">
+                    <h3>Padding - Individual Sides</h3>
+                    <ul><p>CSS has properties for specifying the padding for each side of an element:</p>
+                        <li><code>padding-top</code></li>
+                        <li><code>padding-right</code></li>
+                        <li><code>padding-bottom</code></li>
+                        <li><code>padding-left</code></li>
+                    </ul>
+                    <ul><p>All the padding properties can have the following values:</p>
+                        <li>length - specifies a padding in px, pt, cm, etc.</li>
+                        <li>% - specifies a padding in % of the width of the containing element</li>
+                        <li>inherit - specifies that the padding should be inherited from the parent element</li>
+                    </ul>
+                    <p class="tip"><strong>Note: </strong>Negative values are <strong>not</strong> allowed.</p>
+                </div>
+
+                <div class="padding-div">
+                    <h4>Example:</h4>
+
+                    <div class="code-div">
+                        <code>
+                            div {<br>
+                                <span class="indent">padding-top: 50px;<br></span>
+                                <span class="indent">padding-right: 30px;<br></span>
+                                <span class="indent">padding-bottom: 50px;<br></span>
+                                <span class="indent">padding-left: 80px;<br></span>
+                            }
+                        </code>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="main-section" id="CSS_margins">
+                <header><h2>CSS margins</h2></header>
+                <p>The CSS <code>margin</code> properties are used to create space around elements, outside of any defined borders.<br>
+                    With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
+                <div class="margins-div">
+
+                    <h3>Margin - Individual Sides</h3>
+                    <ul><p>CSS has properties for specifying the margin for each side of an element:</p>
+                        <li><code>margin-top</code></li>
+                        <li><code>margin-right</code></li>
+                        <li><code>margin-bottom</code></li>
+                        <li><code>margin-left</code></li>
+                    </ul>
+                    <ul><p>All the margin properties can have the following values:</p>
+                        <li>auto - the browser calculates the margin</li>
+                        <li>length - specifies a margin in px, pt, cm, etc.</li>
+                        <li>% - specifies a margin in % of the width of the containing element</li>
+                        <li>inherit - specifies that the margin should be inherited from the parent element</li>
+                    </ul>
+                    <p class="tip"><strong>Note: </strong>Negative values are allowed.</p>
+                </div>
+
+                <div class="margin-div">
+                    <h4>Example:</h4>
+                    <div class="code-div">
+                        <code>
+                            div {<br>
+                                <span class="indent">margin-top: 100px;<br></span>
+                                <span class="indent">margin-right: 100px;<br></span>
+                                <span class="indent">margin-bottom: 150px;<br></span>
+                                <span class="indent">margin-left: 80px;<br></span>
+                            }
+                        </code>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="main-section" id="CSS_borders">
+                <header><h2>CSS borders</h2></header>
+                <p>The CSS <code>border</code> properties allow you to specify the style, width, and color of an element's border.</p>
+
+                <div class="borders-div">
+                    <h3>CSS Border Style</h3>
+                    <p>The <code>border-style</code> property specifies what kind of border to display.</p>
+                    <ul><p>The following values are allowed:</p>
+                        <li><code>dotted</code> - Defines a dotted border</li>
+                        <li><code>dashed</code> - Defines a dashed border</li>
+                        <li><code>solid</code> - Defines a solid border</li>
+                        <li><code>double</code> - Defines a double border</li>
+                        <li><code>groove</code> - Defines a 3D grooved border. The effect depends on the border-color value</li>
+                        <li><code>ridge</code> - Defines a 3D ridged border. The effect depends on the border-color value</li>
+                        <li><code>inset</code> - Defines a 3D inset border. The effect depends on the border-color value</li>
+                        <li><code>outset</code> - Defines a 3D outset border. The effect depends on the border-color value</li>
+                        <li><code>none</code> - Defines no border</li>
+                        <li><code>hidden</code> - Defines a hidden border</li>
+                    </ul>
+                    <p>The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+                    
+                </div>
+
+                <div class="borders-div">
+                    <h4>Example:</h4>
+                    <div class="code-div">
+                        <code>
+                            <span>p.dotted {border-style: dotted;}</span><br>
+                            <code>p.dashed {border-style: dashed;}</code><br>
+                            <code>p.solid {border-style: solid;}</code><br>
+                            <code>p.double {border-style: double;}</code><br>
+                            <code>p.groove {border-style: groove;}</code><br>
+                            <code>p.ridge {border-style: ridge;}</code><br>
+                            <code>p.inset {border-style: inset;}</code><br>
+                            <code>p.outset {border-style: outset;}</code><br>
+                            <code>p.none {border-style: none;}</code><br>
+                            <code>p.hidden {border-style: hidden;}</code><br>
+                            <code>p.mix {border-style: dotted dashed solid double;}</code><br>
+                        </code>
+                    </div>
+                </div>
+                <p class="footer">to learn more code visit <a class="footer-link" href="https://www.w3schools.com/">W3school website</a></p>
+
+
+            </section>
+            
+        </main>
+        <nav id="navbar">
+            <header><h1>CSS box model</h1></header>
+            <div>
+                <ul>
+                    <li><a class="nav-link" href="#CSS_box_model">CSS box model</a></li> 
+                    <li><a class="nav-link" href="#Width_and_Height_of_an_Element">Width and Height of an Element</a></li>  
+                    <li><a class="nav-link" href="#CSS_padding">CSS padding</a></li>   
+                    <li><a class="nav-link" href="#CSS_margins">CSS margins</a></li>   
+                    <li><a class="nav-link" href="#CSS_borders">CSS borders</a></li>  
+                </ul>  
+            </div>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+  
+:root{
+  font-size: 19px;
+}
+
+
+body{
+  display: inline-block;
+    font-family: "Afacad Flux", tahoma;
+    font-weight: normal;
+    color: rgb(77, 77, 77);
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    height:100%;
+    margin: auto ;
+}
+
+.main-section{
+  max-width: 800px
+}
+
+.main-section:not(:first-of-type) {
+  margin-top: 50px;
+}
+
+#navbar {
+  position: fixed;
+  color: rgb(48, 49, 49);
+  background-color: #fafafa;
+  width: 25%;
+  height: 100vh;
+  margin: 0;
+  overflow: auto;
+}
+
+#main-doc{
+  width: 70%;
+  height: 100%;
+  padding-left: 20px ;
+  padding-right: 10px;
+  margin: auto;
+  float:right;
+}
+
+#main-doc header {
+  color: rgb(24, 24, 24);
+}
+
+
+
+
+#main-doc ul{
+  margin-top: 20px;
+}
+
+ul p{
+  margin-left:-40px; 
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  margin:auto
+}
+
+#navbar header{
+    min-height: 60px;
+    max-height: 80px;
+  background-color: rgb(134, 209, 209);
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+}
+
+#navbar h1{
+    display: block;
+    margin: 25px auto ;
+
+
+}
+
+#navbar ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  
+}
+
+#navbar li{
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  max-height: 100px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-left: 5px;
+  height: 40px;
+}
+
+#navbar li:last-child {
+  border-bottom: none;
+}
+
+li > a {
+  
+    color: inherit;
+    text-decoration: none;
+    width: 100%; 
+}
+
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+}
+.footer{
+
+  margin-top: 35px;
+  text-align: center;
+}
+
+.footer-link:hover{
+  color: rgb(1, 245, 1);
+}
+
+#navbar li:hover {
+  background-color: #555;
+  color: white;
+}
+
+#main-doc ul li{
+  margin-top: 8px;
+}
+
+
+  .code-div {
+    max-width: 600px;
+    padding: 10px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 5px;
+    margin-left: 30px;
+  }
+
+  code{
+    background-color: rgb(224, 224, 224);
+    font-size: 0.8rem;
+    color: rgb(1, 43, 43);
+    padding: 1px 5px;
+    border-radius: 2px;
+  }
+
+  .indent{
+    padding-left: 20px
+  }
+
+  .calc-div {
+    max-width: 800px ;
+    background-color: rgb(253, 253, 210);
+    border-left: 3px yellow solid ;
+    padding: 10px 15px;
+  }
+  .tip{
+    background-color: rgb(253, 253, 210);
+    color: rgb(92, 91, 91);
+    max-width: 800px ;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+
+  @media (max-width: 500px) {
+    #navbar {
+      width: 0px;
+    }
+    #main-doc {
+      width: 90%;
+    }
+    #navbar h1{
+      margin: 10px auto ;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #navbar h1{
+      margin: 10px auto ;
+  }
+} 
